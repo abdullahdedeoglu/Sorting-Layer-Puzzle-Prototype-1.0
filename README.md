@@ -1,28 +1,20 @@
-# Sorting-Layer-Puzzle-Prototype-1.0
-One of the puzzle prototype of Painted Hearts mechanics
+# Sorting Layer Puzzle
 
-## Overview
+A puzzle mechanic prototype for my game Painted Hearts: drag the layers of a picture into the right order to reveal it.
 
-This repository contains a mechanic prototype for a Unity game. The prototype demonstrates a layer sorting mechanic where players must arrange layers in the correct order to progress.
+## How it works
 
-## Features
+- **Drag to reorder.** Layers are UI elements you drag up and down; the stack reorders as you move them.
+- **Right order, right picture.** Each layer knows its correct position and pushes its important items to the matching sorting order, so the picture looks right only when the stack is right.
+- **Solve it.** When every layer is in place the puzzle shows "You Passed".
+- **Data-driven.** Each layer's correct index and its key items live in a ScriptableObject, so new puzzles need no code.
 
-- **DragController:** Handles the dragging behavior for UI elements vertically. Allows players to drag and reorder layers.
-- **Layer:** Manages individual layers in the game. Determines if a layer is in the correct order and adjusts the sorting order of important items accordingly.
-- **LayerManager:** Manages the overall state of layers in the game. Checks if all layers are in the correct order and displays a "You Passed" message if so.
-- **LayerScriptableObject:** ScriptableObject containing data for individual layers, including their order index and the name of important items associated with each layer.
+Scripts: `DragController`, `Layer`, `LayerManager`, `LayerScriptableObject`.
 
-## How to Use
+## Status
 
-1. Clone or download the repository.
-2. Open the project in Unity.
-3. Explore the scripts and game objects to understand how the layer sorting mechanic works.
-4. Playtest the prototype to experience the mechanic in action.
-5. Make modifications or integrate the mechanic into your own Unity project as needed.
+An early prototype of the mechanic, not a finished level.
 
-## Notes
+## Running it
 
-- This prototype is still in its primitive stage and may require further development to be fully functional in a game.
-- Feel free to expand upon or customize the mechanic to suit your game's specific requirements.
-- If you encounter any issues or have suggestions for improvement, please create an issue or pull request on GitHub.
-
+Open the project in Unity and press Play.
